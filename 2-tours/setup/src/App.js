@@ -67,7 +67,10 @@ function App() {
   const [tours, setTours] = useState([])
 
   const removeTour = (id) => {
+    //check id of every tour in tours and return it if the tour is not the tour we're passing in
+    //basically excludes the tour we pass in
     const newTours = tours.filter((tour) => tour.id !== id)
+    //set our state to our new filtered array that does not have the id we passed in
     setTours(newTours)
   }
 
@@ -93,6 +96,7 @@ function App() {
       </main>
     )
   }
+  //only displays this when our tours array is 0
   if (tours.length === 0) {
     return (
       <main>
@@ -107,6 +111,7 @@ function App() {
   }
   return (
     <main>
+      {/* passing in our remoteTour function as a prop */}
       <Tours tours={tours} removeTour={removeTour} />
     </main>
   )

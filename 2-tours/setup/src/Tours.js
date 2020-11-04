@@ -7,6 +7,7 @@ const Tours = ({ tours, removeTour }) => <section>
   </div>
   <div>
     {tours.map((tour) => {
+      //https://reactjs.org/docs/lists-and-keys.html
       return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
     })}
   </div>
