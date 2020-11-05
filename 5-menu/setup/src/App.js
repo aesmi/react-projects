@@ -4,7 +4,25 @@ import Categories from './Categories';
 import items from './data';
 
 function App() {
-  return <h2>menu project setup</h2>;
+  const [menuItems, setMenu] = useState(items);
+  const [categories, setCategories] = useState([]);
+
+  const filterItems = (category) => {
+    const newItems = items.filter((item)=>item.category == category)
+  }
+
+  return (
+    <main>
+      <section className="menu section">
+        <div className='menu section'>
+          <h2>our menu</h2>
+          <div className='underline'></div>
+        </div>
+        <Categories />
+        <Menu items={menuItems}/>
+      </section>
+    </main>
+  );
 }
 
 export default App;

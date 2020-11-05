@@ -250,3 +250,9 @@ main {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
 }
+
+.icon {
+  /* font size affects svg */
+  font-size: 4rems;
+  color: red;
+}
